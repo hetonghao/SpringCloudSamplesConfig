@@ -1,0 +1,20 @@
+server:
+  port: 8812
+spring:
+  application:
+    name: parking-service
+  datasource:
+    url: ${spring_datasource_url:jdbc:postgresql://pgm-wz9006t1oky2042t3o.pg.rds.aliyuncs.com:3432/smart_parking}
+    username: ${spring_datasource_username:bull}
+    password: ${spring_datasource_password:vvAFXHrxKe672Rc*Y43T*Fv4wPkrxTiV}
+    driver-class-name: org.postgresql.Driver
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8801/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        #开启springboot-actuator监控端点 '*' 全部 ，默认只有health、info
+        include: health,info,hystrix.stream
