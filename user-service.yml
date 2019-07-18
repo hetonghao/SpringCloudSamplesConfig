@@ -4,9 +4,9 @@ spring:
   application:
     name: user-service
   datasource:
-    url: ${spring_datasource_url:jdbc:postgresql://pgm-wz9006t1oky2042t3o.pg.rds.aliyuncs.com:3432/smart_parking}
-    username: ${spring_datasource_username:bull}
-    password: ${spring_datasource_password:vvAFXHrxKe672Rc*Y43T*Fv4wPkrxTiV}
+    url: ${spring_datasource_url:jdbc:postgresql://localhost:5432/postgres}
+    username: ${spring_datasource_username:postgres}
+    password: ${spring_datasource_password:Thinker@2019}
     driver-class-name: org.postgresql.Driver
 eureka:
   client:
